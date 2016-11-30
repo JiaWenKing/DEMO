@@ -1,7 +1,6 @@
 package com.example.administrator.demo;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
@@ -41,23 +40,24 @@ public class MainActivity extends AppCompatActivity {
 
         initView();
 
+
     }
 
     public void initView() {
 
-        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                switch (i) {
-                    case 0:
-                        danli.jump(MainActivity.this, JSActivity.class);
-                        break;
-                    case 1:
-                        break;
-                }
-            }
-        });
     }
+
+    @OnItemClick(R.id.listview)
+    public void itemclickfun(int position) {
+        switch (position) {
+            case 0:
+                danli.jump(MainActivity.this, JSActivity.class);
+                break;
+            case 1:
+                break;
+        }
+    }
+
 
     private List<String> getdata() {
         List<String> list = new ArrayList<>();
@@ -67,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
 
         return list;
     }
+
 
     static class ViewHolder {
         public TextView textView;
