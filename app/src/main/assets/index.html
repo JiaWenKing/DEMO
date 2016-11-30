@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+     <meta charset="utf-8">
+</head>
+<body>
+<div id="message">目前还没消息</div>
+<input type="button" value="发送到安卓" onclick="useAndroid()">
+<input type="button" value="登录" onclick="gotoLogin()">
+</body>
+<script>
+//javascript:脚本语言,html;
+//js和Java语言不通，语法上有区别
+
+//用于调用安卓代码
+function useAndroid(){
+	android.changeText();
+}
+function gotoLogin(){
+	android.gotoLogin();
+}
+
+//用于给安卓调用函数
+function useJs(){
+//表示从网页上找到id为message元素,将他保存在一个名为msg的变量中
+var msg = document.getElementById("message");
+//更改msg的内部html代码
+msg.innerHTML = "收到js消息";
+}
+</script>
+</html>
