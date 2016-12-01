@@ -15,8 +15,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".JSActivity" ></activity>
-        <activity android:name=".Login_JS_Activity"></activity>
+        <activity android:name=".JavaScript.JSActivity" />
+        <activity android:name=".JavaScript.Login_JS_Activity" />
+        <activity android:name=".Scroll.Listview.ListviewActivity"/>
     </application>
 
 </manifest>

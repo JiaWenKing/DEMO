@@ -6,17 +6,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.example.administrator.demo.JavaScript.JSActivity;
+import com.example.administrator.demo.Scroll.Listview.ListviewActivity;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 import butterknife.OnItemClick;
 
 public class MainActivity extends AppCompatActivity {
@@ -54,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
                 danli.jump(MainActivity.this, JSActivity.class);
                 break;
             case 1:
+                danli.jump(MainActivity.this,ListviewActivity.class);
                 break;
         }
     }
@@ -62,8 +64,8 @@ public class MainActivity extends AppCompatActivity {
     private List<String> getdata() {
         List<String> list = new ArrayList<>();
         list.add("javascript通信");
+        list.add("ScrollView-ListView");
         list.add("极光推送");
-        list.add("测试");
 
         return list;
     }

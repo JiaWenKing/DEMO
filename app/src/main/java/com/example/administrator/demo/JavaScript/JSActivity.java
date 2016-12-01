@@ -1,4 +1,4 @@
-package com.example.administrator.demo;
+package com.example.administrator.demo.JavaScript;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -10,6 +10,8 @@ import android.webkit.JavascriptInterface;
 import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.example.administrator.demo.R;
 
 public class JSActivity extends AppCompatActivity {
 
